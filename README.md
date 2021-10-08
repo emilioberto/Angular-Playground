@@ -15,4 +15,6 @@
 
 # Global functions
 
-```function emptyIfNull<T>(arr: Array<T>): Array<T>;```
+```
+  function emptyIfNull<T>(arr: Array<T>): Array<T>;
+```
