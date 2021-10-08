@@ -2,7 +2,8 @@
 
 # Primitive types extensions 
 
-``` interface String {
+``` 
+interface String {
     isNullOrEmpty(this: string): boolean;
   }
 
