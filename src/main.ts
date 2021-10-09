@@ -6,6 +6,8 @@ import { environment } from './environments/environment';
 
 import './extensions/string-extensions';
 import './extensions/array-extensions';
+import './extensions/global';
+import './extensions/number-extensions';
 
 if (environment.production) {
   enableProdMode();
