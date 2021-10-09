@@ -10,7 +10,7 @@ export class AppComponent {
   students: string[] = ['franco', 'fango'];
 
   constructor() {
-    console.log(this.title.isNullOrEmpty())
-    console.log(emptyIfNull(this.students).map(x => 'franco'));
+    console.log(this.title.isNullishOrEmpty())
+    console.log(emptyIfNullish([]).map(x => 'franco'));
   }
 }

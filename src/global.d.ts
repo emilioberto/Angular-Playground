@@ -1,13 +1,18 @@
-export {};
+export { };
 
 declare global {
   interface String {
-    isNullOrEmpty(this: string): boolean;
+    isNullishOrEmpty(this: string): boolean;
   }
 
   interface Array<T> {
-    isNullOrEmpty(this: Array<T>): boolean;
-    emptyIfNull(this: Array<T>): Array<T>;
+    isNullishOrEmpty(this: Array<T>): boolean;
+    emptyIfNullish(this: Array<T>): Array<T>;
+  }
+
+  interface Number {
+    isPositive(this: number): boolean;
+    isNegative(this: number): boolean;
   }
 
   /**
@@ -15,5 +20,5 @@ declare global {
    * @param arr an Array
    * @returns the original array or an empty array if arr is null or undefined
    */
-  function emptyIfNull<T>(arr: Array<T>): Array<T>;
+  function emptyIfNullish<T>(arr: Array<T>): Array<T>;
 }
