@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
-import {FormBuilder, FormGroup} from "@angular/forms";
+import {FormBuilder, FormControl, FormGroup} from "@angular/forms";
 import {FormHandler, isNullOrUndefined} from "src/fluent-forms/fluent-forms";
+import {FluentForm} from "src/fluent-forms/fluent-form";
 
 @Component({
   selector: 'app-root',
@@ -18,10 +19,14 @@ export class AppComponent {
   private buildForm() {
     this.form = this.fb.group({
       name: [''],
-      age: [null],
+      age: new FormControl(null),
       canDrive: [{value: false, disabled: true}],
       car: ['']
     });
+
+    new FluentForm(this.form)
+      .watch('age')
+
 
     new FormHandler(this.form, 'canDrive')
       .watch('age')
